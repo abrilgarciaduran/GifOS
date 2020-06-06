@@ -1,0 +1,131 @@
+#search {
+    background-color: $search-day;
+    position: relative;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+form button {
+    @include alineacionVertical;
+    background: #E6E6E6;
+    width: 8.5%;
+    height: 32px;
+    border: 1px solid #808080;
+    margin-left: 8px;
+    box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+    justify-content: space-evenly;
+    color: $search-night;
+}
+
+#searchBar {
+    height: 99px;
+    
+    div {
+        width: 99.5%;
+        background-image: $gradient-day;
+        margin-left: 3px;
+        h2 {
+            margin-left: 3px;
+        }
+    }
+    form {
+        height: 72px;
+        @include alineacionVertical;
+        justify-content: flex-start;
+        input {
+            width: 86.75%;
+            height: 48px;
+            padding-left: 1.33%;
+            margin-left: 15px;
+            border: 1px solid #979797;
+            box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+        }
+        
+    }
+}
+
+#searchSuggestions {
+    width: 100%;
+    height: 160px;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    background: $search-day;
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-evenly;
+    z-index: 1;
+    ul {
+        padding: 5px 0 16px 0;
+        li {
+        @include alineacionVertical;
+        width: 86.75%;
+        height: 34px;
+        padding-left: 15px;
+        margin: 11px 0 0 15px;
+        background: #F0F0F0;
+        border: 1px solid #808080;
+        box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+        &:hover {
+            background: #bdbdbd;
+            border: 1px dotted #110038;
+        }
+        }
+    }
+}
+
+
+#previouslySearchedTags {
+    height: 46px;
+    padding-top: 12px;
+    background: $color-body-day;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    div {
+        @include alineacionVertical;
+        width: fit-content;
+        height: 34px;
+        margin-right: 8px;
+        border: 1px solid #4C2F99;
+        box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+        background: $secondary-color-day;
+        display: inline-flex;
+    }
+    p {
+        font-weight: normal;
+        margin-block-start: 7px;
+        margin-block-end: 7px;
+        margin: 8px 7px 8px 7px;
+        font-size: 14px;
+        color: $font-white;
+        line-height: 18px;
+        width: fit-content;
+        
+    }
+}
+
+
+
+
+///Night
+body#night {
+    #search {
+        background-color: $search-day;
+    }
+    #searchBar {
+        background: #B4B4B4;
+        box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+        div {
+            background-image: $gradient-night;
+        }
+    }
+    #previouslySearchedTags {
+        background: $color-body-night;
+        div {
+            background: $secondary-color-night;
+            border: 1px solid #4C2F99;
+            box-shadow: inset -2px -2px 0 0 #2124B3, inset 2px 2px 0 0 #FFFFFF;
+        }
+    }
+}

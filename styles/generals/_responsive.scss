@@ -1,0 +1,50 @@
+@media (min-width: 1400px) {
+    .gifContainer {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 768px) {
+    main section, header {
+        width: 95%;
+        margin: auto;
+        position: relative;
+        min-width: 300px;
+    }
+    #welcome {
+        height: auto;
+    }
+    #logoContainer {
+        margin-left: 20px;
+    }
+    #searchBar form button {
+        height: 46px;
+        width: 46px;
+        flex-direction: column;
+        font-size: 14px;
+    }
+    
+}
+@media (max-width: 600px){
+    #buttonContainer {
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 200px;
+    }
+    header {
+        height: 200px;
+    }
+}
+@media (max-width: 1000px){
+    .gifContainer div {
+        width: 288px;
+        height: 298px;
+    }
+    #gifSuggestions .gifContainer div {
+        width: 288px;
+        height: 313px;
+        a {
+            margin: 260px 0 0 11px;
+        }
+    }
+}

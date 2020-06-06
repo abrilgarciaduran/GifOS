@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>GifOS</title>
+    <!--Metadata-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="gifs, crear, imagen, buscar">
+    <meta name="author" content="Abril Sofia Garcia Duran">
+    <meta name="description" content="Busca Gifs de lo que quieras y crea los tuyos propios">
+    <!--Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch:400,700,700i&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <section id="welcome"><h1>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</h1></section>
+    
+    <header id="home">
+        <div id="logoContainer">
+            <img id="logo" alt="logo" src="assets/gifOF_logo.png">
+        </div>
+        <nav id="buttonContainer">
+            <div id="crearButton" class="pinkButton"><a href="upload.html">Crear Guifos</a></div>
+            <div id="temasButtonContainer">
+                <input type="checkbox" id="dropdown">
+                <div class="pinkButton"  id="temasButton">
+                    <label for="dropdown">
+                        <a>Elegir tema</a>
+                        <img alt="flecha" src="assets/dropdown.svg">
+                    </label>
+                </div>
+                <ul id="ulDropdown">
+                    <li id="dayThemeButton"><p>Sailor Day</p></li>
+                    <li id="nightThemeButton"><p>Sailor Night</p></li>
+                </ul>  
+            </div>
+            <div id="myGifosButton"><a href="upload.html">Mis Guifos</a></div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="search">
+            <div id="searchBar">
+                <div><h2>Buscar</h2></div>
+                <form id="searchForm">
+                    <input type="text" id="searchInput" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…">
+                    <button type="submit" id="searchButton"><img alt="imagen de prueba" src="assets/lupa_inactive.svg">Buscar</button>
+                </form>
+            </div>
+            <div id="searchSuggestions">
+            </div>
+            <div id="previouslySearchedTags"></div>
+        </section>
+
+
+        <section id="searchResults" class="gifSection">
+            <div class="titleContainer"><h3>Resultados</h3></div>
+            <div class="gifContainer" id="searchResultsContainer">
+            </div>
+        </section>
+
+
+        <section id="gifSuggestions"  class="gifSection">
+            <div class="titleContainer"><h3>Hoy te sugerimos:</h3></div>
+            <div class="gifContainer" id="gifSuggestionsContainer"></div>
+        </section>
+
+
+        <section id="trends" class="gifSection">
+            <div class="titleContainer"><h3>Tendencias:</h3></div>
+            <div class="gifContainer" id="trendsContainer"></div>
+        </section>        
+    </main>
+
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>

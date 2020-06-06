@@ -1,0 +1,71 @@
+#gifSuggestions {
+    height: auto;
+    position: relative;
+    z-index: 0;
+    .gifContainer div {
+        height: 22.35vw;
+        background: #E6E6E6;
+        box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+        position: relative;
+    }
+    .gifSuggested {
+    box-sizing: border-box;
+    width: 98%;
+    height: 89.45%;
+    margin: 29px 4px 4px 4px;
+    position: relative;
+    z-index: 1;
+    }
+    h2 {
+        @include alineacionVertical;
+        height: 24px;
+        padding-left: 3px;
+        background-image: $gradient-day;
+        margin: 4px;
+    }
+    a {
+        padding: 8px 10px 8px 10px;
+        border: 1px solid #4C2F99;
+        margin: 92% 0 0 11px;
+        box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+        background: $secondary-color-day;
+        font-size: 14px;
+        line-height: 18px;
+        position: absolute;
+        color: $font-white;
+        text-align: center;
+        z-index: 2;
+        &:hover {
+            border: 1px dotted #110038;
+        }
+    }
+    #x {
+        width: 16px;
+        height: 14px;
+        position: absolute;
+        margin: 8px 0 0 90%;
+        z-index: 1;
+    }
+}
+
+///Night 
+body#night {
+    #gifSuggestions {
+        h2 {
+            background-image: $gradient-night;
+        }
+        a {
+            background: $secondary-color-night;
+            border: 1px solid #4C2F99;
+            box-shadow: inset -2px -2px 0 0 #2124B3, inset 2px 2px 0 0 #FFFFFF;
+        }
+        .gifContainer div {
+            background: #B4B4B4;
+            box-shadow: inset -2px -2px 0 0 #5C5C5C, inset 2px 2px 0 0 #FFFFFF;
+        }
+        .gifSuggested {
+            width: 280px;
+            height: 280px;
+        }
+    }
+}

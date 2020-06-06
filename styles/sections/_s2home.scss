@@ -1,0 +1,137 @@
+///Day
+header {
+    height: 115px;
+    @include alineacionVertical;
+    justify-content: space-between;
+    
+    nav {
+        @include alineacionVertical;
+        ul {
+            @include hidden;
+            width: 170px;
+            height: 92px;
+            list-style-type: none;
+            background: $search-day;
+            li {
+                @include alineacionVertical;
+                height: 36px;
+                width: 150px;
+                margin: 10px;
+                background: #FFF4FD;
+                border: 1px solid #CCA6C9;
+                box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+            }
+        }
+        input {
+            @include hidden;
+            &:checked ~ ul {
+                display: block;
+                transform: translate(0, 44px);
+                position: relative;
+                z-index: 2;
+            }
+            &:checked ~ #temasButton {
+                transform: translate(0, 50px);
+            }
+        }
+        label {
+            @include alineacionVertical;
+            justify-content: space-between;
+            img {
+                padding: 12px 11px;
+                border-left: 1px solid #110038;
+            }
+        }        
+    }
+}
+#temasButton a {
+    margin: 0px 22px;
+    &:hover {
+        border: none;
+        border-top: 1px dotted #110038;
+        border-bottom: 1px dotted #110038;
+    }
+}
+#logoContainer {
+    margin-left: -9px ;
+}
+//Botones
+#crearButton {
+    width: 144px;
+    height: 36px;
+    margin-right: 16px;            
+}
+
+#temasButton {
+    width: 168px;
+    height: 36px;
+}
+#dayThemeButton {
+    padding: 16px;
+    background: $color-body-day;
+    p::first-letter {
+        text-decoration: underline;
+    }
+}
+#nightThemeButton {
+    padding: 16px;
+    background: #F0F0F0;
+    text-decoration: none;
+}
+
+#myGifosButton {
+    width: 95px;
+    height: 32px;
+    margin-left: 16.5px;
+    background: inherit;
+    @include alineacionVertical;
+    a {
+        font-size: 16px;
+    }
+    a::first-letter {
+        text-decoration: underline;
+    }
+    &:hover {
+        border: 1px dotted #110038;
+        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    }
+    &:active {
+        color: #B4B4B4;
+    }
+}
+
+///Night 
+body#night {
+    
+    #myGifosButton {
+        a {
+        color: $font-white;
+        }
+        &:hover {
+            border: 1px dotted #FFFFFF;
+        }
+    }
+    ul {
+        background: $search-night;
+    }
+    #dayThemeButton {
+        border: 1px solid #808080;
+        box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+        background: #CCCCCC;
+        text-decoration: none;
+    }
+    #nightThemeButton {
+        background: #2E32FB;
+        border: 1px solid rgba(51,53,143,0.20);
+        box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+        &::first-letter  {
+            text-decoration: underline;
+        }
+    }
+    #temasButtonContainer label img {
+        transform: rotate(-270deg);
+        fill: #FFFFFF;
+        border: none;
+        border-bottom: 1px solid #110038;
+    }
+}

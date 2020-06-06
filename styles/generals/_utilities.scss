@@ -1,0 +1,161 @@
+/// Generales
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border: none;
+    text-decoration: none;
+    letter-spacing: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+/// Variables
+$gradient-day:  linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+$primary-color-day: #F7C9F3;
+$secondary-color-day: #4180F6;
+$color-body-day: #FFF4FD;
+$font-color-day: #110038;
+$font-white: #FFFFFF;
+$search-day: #E6E6E6;
+
+$gradient-night:  linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+$primary-color-night: #EE3EFE;
+$secondary-color-night: #2E32FB;
+$color-body-night: #110038;
+$search-night: #B4B4B4;
+
+
+/// Mixins
+
+@mixin hidden {
+    display: none;
+}
+
+@mixin alineacionVertical {
+    display: flex;
+    align-items: center;
+}
+
+@mixin alineacionHorizontal {
+    display: flex;
+    justify-content: center;
+}
+
+
+/// General y Clases
+body {
+    background: $color-body-day
+}
+main section, header {
+    width: 83.33%;
+    margin-left: 100px;
+    position: relative;
+    max-width: 1200px;
+}
+
+.gifSection {
+    margin-top: 64px;
+    
+}
+.titleContainer {
+    width: 100%;
+    height: 32px;
+    margin-bottom: 17px;
+    border: 1px solid #E6BBE2;
+    box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+    @include alineacionVertical;
+    h3 {
+        margin-left: 7px;
+    }
+}
+.gifContainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    position: relative;
+    div {
+        width: 24%;
+        min-width: 200px;
+        height: 21.3vw;
+        margin-bottom: 16px;
+        h2 {
+            position: absolute;
+            width: 98%;
+        }
+        h4 {
+            display: none;
+            width: 24%;
+        }
+        img {
+            height: inherit;
+            width: inherit;
+            object-fit: cover;
+            position: absolute;
+            &:hover {
+               border: 1px solid #110038;
+               border-style: dotted;
+               background: #E6E6E6;
+               box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+               & ~ h4 {
+                display: block;
+               }
+            }
+        }
+    }
+    
+}
+
+.pinkButton {
+    color: $font-color-day;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+    background: $primary-color-day;
+    a, h4 {
+        height: 30px;
+        margin: 2px;
+        font-size: 16px;
+        @include alineacionVertical;
+        @include alineacionHorizontal;
+        &:hover {
+            border: 1px dotted #110038;
+            background: #E6BBE2;
+        }
+    }
+    label {
+        height: 30px;
+        margin: 2px;
+        &:hover {
+            border: 1px dotted #110038;
+            background: #E6BBE2;
+        }
+        h3 {
+            font-size: 16px;
+        }
+    }
+    
+            
+}
+
+body#night {
+    background: $color-body-night;
+    .titleContainer {
+        background: #FFFAFE;
+        color: $color-body-night;
+    }
+    .pinkButton {
+        background: $primary-color-night;
+        color: $font-white;
+        box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+        a, label {
+            color: #FFFFFF;
+        }
+        h4:hover, a:hover, label:hover {
+            background: #CE36DB;
+            border: 1px dotted #110038;
+        }
+    }
+}
+

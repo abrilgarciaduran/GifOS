@@ -1,0 +1,61 @@
+///Bienvenidos
+h1 {
+    font-size: 12px;
+    line-height: 16px;
+    color: $font-white;
+}
+
+///Texto en blanco
+h2 {
+    font-size: 14px;
+    line-height: 18px;
+    color: $font-white;
+    font-weight: 700;
+}
+
+///Titulos de secciones
+h3, a {
+    font-size: 14px;
+    color: $font-color-day;
+    line-height: 18px;
+}
+
+//Titulo de cada gif
+h4 {
+    width: 289px;
+    height: 24px;
+    padding: 2px 0 0 3px;
+    margin-top: 274px;
+    position: absolute;
+    font-size: 14px;
+    font-weight: 700;
+    color: #FFFFFF; 
+    line-height: 18px;
+    z-index: 1;
+    background-image: $gradient-day;
+}
+
+///texto
+p {
+    font-size: 16px;
+    color: $font-color-day;
+    line-height: 22px;
+}
+/// Texto botones
+button {
+    font-size: 16px;
+    line-height: 18px;
+}
+/// Li
+li {
+    font-size: 16px;
+    line-height: 22px;
+}
+
+
+
+body#night {
+    a {
+        color: $font-white;
+    }
+}
