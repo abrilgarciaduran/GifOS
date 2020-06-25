@@ -7,14 +7,12 @@ ________________
 
 -HTML
 
--CSS
+-CSS, Responsive design
 
--SASS
+-Javascript
 
--Koala
+-SASS, Koala
 
--Responsive design
+-Asincronismo, interacción con el DOM
 
--Flexbox y grid layout
-
--Atomic CSS
+-Interacción con una API, protocolo HTTP, métodos GET y POST, JSON.
